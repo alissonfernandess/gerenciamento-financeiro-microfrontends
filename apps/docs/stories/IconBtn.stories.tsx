@@ -18,8 +18,6 @@ export const Primary: Story = {
   args: {
     icon: BiHome,
     type: "button",
-    backgroundColor: "#007bff",
-    fontColor: "#fff",
     text: "teste",
     hasBackgroundColor: false,
     iconDirection: "row",

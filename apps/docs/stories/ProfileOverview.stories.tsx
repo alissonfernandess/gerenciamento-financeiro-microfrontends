@@ -1,6 +1,6 @@
 
 import type { Meta, StoryObj } from '@storybook/react';
-import ProfileOverview from "../../../packages/ui/src/components/ProfileOverview";
+import { ProfileOverview } from "../../../packages/ui/src/components/ProfileOverview";
 
 const meta = {
   title: "ProfileOverview",

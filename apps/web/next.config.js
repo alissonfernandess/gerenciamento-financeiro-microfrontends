@@ -3,6 +3,7 @@ const DASHBOARD_URL = process.env.DASHBOARD_URL ?? "http://localhost:3001";
 const TRANSACTIONS_URL = process.env.TRANSACTIONS_URL ?? "http://localhost:3002";
 
 const nextConfig = {
+  output: "standalone",
   allowedDevOrigins: [
     "192.168.125.130:3000",
     "localhost:3000",
