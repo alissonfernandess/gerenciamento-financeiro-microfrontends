@@ -1,0 +1,11 @@
+.git
+node_modules
+**/node_modules
+**/.next
+**/.turbo
+**/out
+**/Dockerfile
+.yarn/cache
+.yarn/install-state.gz
+*.md
+!README.md
