@@ -104,6 +104,49 @@ yarn exec turbo dev --filter=web
 yarn exec turbo dev --filter=web
 ```
 
+### Docker (Docker Compose)
+
+Você pode rodar todos os aplicativos juntos usando [Docker Compose](https://docs.docker.com/compose/). Cada aplicativo possui seu próprio `Dockerfile` em `apps/<nome-do-app>/Dockerfile`.
+
+Para compilar as imagens e subir todos os serviços, execute na raiz do repositório:
+
+```sh
+docker compose up --build
+```
+
+Para rodar em segundo plano (modo detached):
+
+```sh
+docker compose up --build -d
+```
+
+Após subir, os aplicativos ficam disponíveis em:
+
+- `web` (shell/host dos microfrontends): [http://localhost:3000](http://localhost:3000)
+- `dashboard`: [http://localhost:3001](http://localhost:3001)
+- `transactions`: [http://localhost:3002](http://localhost:3002)
+- `docs`: [http://localhost:3003](http://localhost:3003)
+
+O serviço `web` depende dos serviços `dashboard` e `transactions`, que são iniciados automaticamente antes dele.
+
+Para subir apenas um serviço específico (e suas dependências):
+
+```sh
+docker compose up --build web
+```
+
+Para acompanhar os logs quando estiver rodando em segundo plano:
+
+```sh
+docker compose logs -f
+```
+
+Para parar e remover os contêineres:
+
+```sh
+docker compose down
+```
+
 ### Cache Remoto (Remote Caching)
 
 > [!TIP]
