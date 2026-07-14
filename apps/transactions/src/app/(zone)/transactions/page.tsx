@@ -15,7 +15,7 @@ export default function TransactionsListPage() {
         <div className="extrato-top-header">
           <h1 className="extrato-title">Transações</h1>
           <Link
-            href="/transactions/transactions/create"
+            href="/transactions/create"
             className="edit-btn"
             aria-label="Nova transação"
           >

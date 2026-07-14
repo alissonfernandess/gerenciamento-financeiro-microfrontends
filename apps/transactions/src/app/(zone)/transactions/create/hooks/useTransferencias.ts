@@ -95,7 +95,7 @@ export function useTransferencias() {
     };
 
     setUser(usuarioAtualizado);
-    router.push("/transactions/transactions");
+    router.push("/transactions");
   };
 
   return {
